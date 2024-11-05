@@ -223,6 +223,7 @@ body{
     cursor: pointer;
     overflow: hidden;
     transition: color 0.3s ease;
+    z-index: 1;
     
 }
 
@@ -234,7 +235,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #e9204f;
-    z-index: 0;
+    z-index: -1;
     transform: translateX(-100%);
     transition: transform 0.4s ease;
 }
@@ -245,7 +246,7 @@ body{
 
 .gettingStarted span{
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -349,6 +350,7 @@ body{
     cursor: pointer;
     overflow: hidden;
     transition: color 0.3s ease;
+    z-index: 1;
 }
 
 .view-all-btn::before {
@@ -359,13 +361,14 @@ body{
     width: 100%;
     height: 100%;
     background-color: #f5487f;
-    z-index: 0;
+    z-index: -1;
     transform: translateX(-100%);
     transition: transform 0.4s ease;
 }
 
 .view-all-btn:hover::before {
     transform: translateX(0);
+    
 }
 
 .view-all-btn:hover {
@@ -374,7 +377,7 @@ body{
 
 .view-all-btn span {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -410,41 +413,38 @@ body{
  
   .about-grid {
     display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-    "small1 large"
-    "small2 large";
-  gap: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-  height: 600px;
+    grid-template-columns: 3fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas: 
+      "large small1"
+      "large small2";
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 600px;
   }
-
-
-.about-item.large {
-    grid-area: large;
-  height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;}
   
- 
+  .about-item.large {
+    grid-area: large;
+    height: 100%; 
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
   .about-item.small {
+    height: 100%; 
     width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
   }
   
   .about-item.small:first-child {
     grid-area: small1;
-    height: 100%;
   }
   
   .about-item.small:last-child {
     grid-area: small2;
-    height: 100%;
   }
   
   .about-item img {
@@ -454,29 +454,31 @@ body{
     border-radius: 8px;
     filter: grayscale(100%);
   }
-
+  
   .about-item:hover img {
     opacity: 1;
     filter: grayscale(0);
   }
-.about-item-info {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-
-.about-item {
-  position: relative;
-  overflow: hidden;
-}
+  
+  .about-item-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .about-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
   .about-item-title {
     font-weight: bold;
   }
+  
   .about-item-description {
     font-size: 0.9em;
     color: #ddd;
@@ -842,6 +844,7 @@ body{
     cursor: pointer;
     overflow: hidden;
     transition: color 0.3s ease;
+    z-index: 1;
 }
 
 .enquiry-button::before {
@@ -852,7 +855,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: #f5487f;
-    z-index: 0;
+    z-index: -1;
     transform: translateX(-100%);
     transition: transform 0.4s ease;
 }
@@ -867,7 +870,7 @@ body{
 
 .enquiry-button span {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -935,4 +938,6 @@ body{
 .footer-links a:hover {
     color: #f5487f;
 }
+
+
 
